@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Import Google Icon Font and Materialize CSS from CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+  <!-- Meta Tag for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Enhanced Materialize Cards</title>
+</head>
+<body>
+
+  <!-- Materialize grid system (row and columns) -->
+  <div class="container">
+    <div class="row">
+      <!-- First Card -->
+      <div class="col s12 m4">
+        <div class="card hoverable">
+          <div class="card-image">
+            <!-- Example image URL -->
+            <img src="https://www.w3schools.com/w3images/fjords.jpg">
+            <span class="card-title">Card 1</span>
+          </div>
+          <div class="card-content">
+            <p>This is card 1. It has a basic layout with an image, title, description, and some buttons below.</p>
+            <!-- A List inside a Card -->
+            <ul>
+              <li>Feature 1</li>
+              <li>Feature 2</li>
+              <li>Feature 3</li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <!-- Buttons inside the card -->
+            <a href="#" class="btn-small red">Learn More</a>
+            <a href="#" class="btn-small blue">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Card with Progress Bar -->
+      <div class="col s12 m4">
+        <div class="card hoverable">
+          <div class="card-image">
+            <!-- Example image URL -->
+            <img src="https://www.w3schools.com/w3images/fjords.jpg">
+            <span class="card-title">Card 2</span>
+          </div>
+          <div class="card-content">
+            <p>This is card 2. It includes a progress bar and some text.</p>
+            <!-- Materialize Progress Bar -->
+            <div class="progress">
+              <div class="determinate" style="width: 70%"></div>
+            </div>
+            <p>Progress: 70%</p>
+          </div>
+          <div class="card-action">
+            <a href="#">Start Task</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Card with Icon and Input -->
+      <div class="col s12 m4">
+        <div class="card hoverable">
+          <div class="card-image">
+            <!-- Example image URL -->
+            <img src="https://www.w3schools.com/w3images/fjords.jpg">
+            <span class="card-title">Card 3</span>
+          </div>
+          <div class="card-content">
+            <p>This is card 3. It includes an icon and an input field for a user to interact with.</p>
+            <!-- Materialize Icon -->
+            <i class="material-icons">alarm</i>
+            <br><br>
+            <!-- Materialize Input Field -->
+            <div class="input-field">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email Address</label>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="#">Submit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Materialize JS from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
