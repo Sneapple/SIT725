@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO & MongoDB</title>
+    <script src="/socket.io/socket.io.js"></script> <!-- Socket.IO client -->
+    <script>
+        // Connect to the server using Socket.IO
+        const socket = io('http://localhost:3000');
+
+        // Listen for the 'dataInserted' event from the server
+        socket.on('dataInserted', (data) => {
+            console.log('New data inserted:', data);
+            alert(`Inserted ${data.insertedCount} pizza(s)!`);
+        });
+
+        // Listen for the 'dataFetched' event from the server
+        socket.on('dataFetched', (data) => {
+            console.log('Fetched data:', data);
+            alert('Fetched data from the server!');
+        });
+    </script>
+</head>
+<body>
+    <h1>Welcome to MongoDB Real-Time Updates</h1>
+    <p>This page will display real-time updates when data is inserted or fetched.</p>
+</body>
+</html>

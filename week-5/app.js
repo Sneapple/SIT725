@@ -20,5 +20,5 @@ app.use(scannerController);
 const PORT = 3001;
 // Start the server
 app.listen(3001, () => {
-    console.log('Server is running on http://localhost:3001');
+    console.log('Server is running on http://localhost:3005');
 });
