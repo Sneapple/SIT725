@@ -1,0 +1,12 @@
+<!-- views/results.ejs -->
+<html>
+    <body>
+        <h1>Scan Results</h1>
+        <ul>
+            <% results.forEach(result => { %>
+                <li><%= result %></li>
+            <% }) %>
+        </ul>
+        <a href="/">Start New Scan</a>
+    </body>
+</html>

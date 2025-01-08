@@ -22,4 +22,10 @@ router.get('/', (req, res) => {
     res.render('scanForm');
 });
 
-module.exports = router;
+
+
+// scannerController.js
+module.exports = (req, res) => {
+    res.send('Hello from the scanner controller!');
+  };
+  

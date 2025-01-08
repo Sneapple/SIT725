@@ -17,8 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Use the controller
 app.use(scannerController);
-
+const PORT = 3001;
 // Start the server
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+app.listen(3001, () => {
+    console.log('Server is running on http://localhost:3001');
 });
