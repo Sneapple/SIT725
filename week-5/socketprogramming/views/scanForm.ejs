@@ -1,0 +1,31 @@
+<!-- socketprogramming/views/scanForm.ejs -->
+<html>
+    <body>
+        <h1>Web Vulnerability Scanner</h1>
+        <form action="#" method="POST" id="scanForm">
+            <label for="url">Enter URL to scan:</label>
+            <input type="text" id="url" name="url" required>
+            <button type="submit">Start Scan</button>
+        </form>
+
+        <!-- Socket.IO client-side script -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            const socket = io();  // Connect to the server via Socket.IO
+
+            // Handle form submission
+            document.getElementById('scanForm').addEventListener('submit', (e) => {
+                e.preventDefault();  // Prevent form from submitting traditionally
+
+                const url = document.getElementById('url').value;
+                socket.emit('scan-request', { url: url });  // Send URL to the server
+
+            });
+
+            // Listen for scan results from the server
+            socket.on('scan-result', (data) => {
+                alert('Scan Result: ' + data.result);  // Show scan result
+            });
+        </script>
+    </body>
+</html>
